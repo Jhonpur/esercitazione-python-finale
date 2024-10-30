@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Iscrizione Maratona{% endblock %}
+
+{% block content %}
+<div class="container mt-5 col-4">
+    <h1 class="mb-4">Iscriviti alla Maratona</h1>
+    
+    <form method="POST" action="{{ url_for('register') }}">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="cognome" class="form-label">Cognome</label>
+            <input type="text" class="form-control" id="cognome" name="cognome" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="numero_maglia" class="form-label">Numero Maglia</label>
+            <input type="number" class="form-control" id="numero_maglia" name="numero_maglia" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Invia Iscrizione</button>
+    </form>
+</div>
+
+
+{% endblock %}

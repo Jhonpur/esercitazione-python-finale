@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Maratona{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Benvenuto al Triathlon Pazzo!</h1>
+    <p class="lead">Unisciti a noi per questa incredibile esperienza.</p>
+    <hr class="my-4">
+    <p>Registrati ora per partecipare all'evento.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Registrati</a>
+</div>
+{% endblock %}
